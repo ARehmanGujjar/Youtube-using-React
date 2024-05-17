@@ -31,7 +31,7 @@ const VideoCard = ({info}) => {
   return (
     
         <div className='m-1 my-2'>
-        <img className='rounded-lg flex items-center justify-center' src={thumbnails.medium.url} alt="thumbnail" />
+        <img className='rounded-lg flex items-center justify-center blur-md ' src={thumbnails.medium.url} alt="thumbnail" />
         <h1 className="text-lg w-72 min-h-15">{title.substring(0,55)}</h1>
         <h1 className="text-lg font-semibold">{channelTitle}</h1>
         <div className="flex">

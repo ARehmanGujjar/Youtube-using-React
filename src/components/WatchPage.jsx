@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenue } from "../utils/AppSlicer";
 import { useSearchParams } from "react-router-dom";
+import CommentContainer from "./CommentContainer";
 
 function WatchPage() {
   const [params] = useSearchParams();
@@ -12,7 +13,7 @@ function WatchPage() {
   }, []);
   return (
     <>
-      <div className="m-5">
+      <div className="m-5 blur-md">
         <iframe
           width="900"
           height="450"
@@ -20,10 +21,11 @@ function WatchPage() {
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
       </div>
+      <CommentContainer/>
     </>
   );
 }
